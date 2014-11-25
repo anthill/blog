@@ -9,9 +9,9 @@ description: > # this means to ignore newlines until "email:"
 
 email: contact@ants.builders
 #blog logo
-logo: "/blog/assets/images/ants_logo.png"
+logo: "/assets/images/ants_logo.png"
 # blog cover
-cover: "/blog/assets/images/crowd.jpg"
+cover: "/assets/images/crowd.jpg"
 
 name: 'ANTS'
 author: 'ANTS'
@@ -19,10 +19,9 @@ author_image: "/assets/images/author.jpg"
 
 paginate:	5
 
-url: "http://ants.builders/blog/"
-site_url: "http://ants.builders/"
-baseurl: "http://ants.builders/blog/"
-permalink: /blog/:day-:month-:year/:title.html
+url: "http://ants.builders/"
+baseurl: "/blog"
+permalink: blog/:day-:month-:year/:title.html
 
 # social icons and sharing options
 social:
