@@ -12,7 +12,7 @@ authors:
 date:   2014-11-25 14:34:25
 categories: post
 tags: featured
-image: /assets/article_images/2014-11-25-counting-coworkers-with-machine-learning/cover.jpg
+image: /assets/article_images/counting-coworkers-with-machine-learning/cover.jpg
 ---
 Le node c’est quoi
 Le problème et amélioration
