@@ -9,9 +9,9 @@ description: > # this means to ignore newlines until "email:"
 
 email: contact@ants.builders
 #blog logo
-logo: "/assets/images/ants_logo.png"
+logo: "/blog/assets/images/ants_logo.png"
 # blog cover
-cover: "/assets/images/crowd.jpg"
+cover: "/blog/assets/images/crowd.jpg"
 
 name: 'ANTS'
 author: 'ANTS'
