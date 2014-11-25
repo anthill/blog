@@ -14,56 +14,83 @@ categories: post
 tags: featured
 image: /assets/article_images/counting-coworkers-with-machine-learning/cover.jpg
 ---
-Le node c’est quoi
-Le problème et amélioration
-Les contraintes du projet (privé etc..)
-Rasberry 
-( Graph rendu du projet sur une journée )
+
+We are working in a coworking space. It's a place we feel home and it's better than having our own offices as we constantly meet new people. Besides, a lot of our friends whom we like to share the space with, are doing things that have nothing to do with our geeky stuff.
+
+The space, located in the historic center of Bordeaux, is a collaborative space, meaning everybody helps. 
+
+There are many reasons why we wanted to measure the number of people working:
+
+- be able to give a feedback to our sponsors (the city mayor)
+- know when the space is opened (not everybody can open the offices and a lot of people would come earlier or on week ends if they knew it was possible)
+- understand what are the main factors pushing people to come and work and to predict peaks of affluence.
 
 
-## Networking footprint
-- Intro : Comment ça fonctionne ()
-- On ne sniff pas les paquets et pourquoi 
-- Qu’est ce qu’on récupère et le résultat 
-(Photo : Rasberry)
+**So we decided to measure, in real-time and with privacy in mind, how many people are working in the space.**
 
-==> On a juste besoin d’un Rasberry et d’un wifi dungle
+It is starting to work nicely, and will keep you posted.
+
+## Network footprint
+
+The first thing we measure is the **invisible footprint we leave around us with our connected devices**. When you turn on you computer or when your smart phone is looking for a network, "we emit" packets of data in the air. We first tried to listen to the packets passing by but we found a much more simple technique based on the local network.
+
+A common linux command `arp-scan` is able to ask the network the mac address of all the devices that are currently connected. Try it yourself in the terminal by typing:
+
+```
+sudo arp-scan --retry=8 --ignoredups -I wlan0 10.0.0.0/24
+```
+
+(`wlan0` and `10.0.0.0` can be something else, use `ifconfig` to see what interface to choose). On my mac:
+
+```
+alexandre:~|⇒  sudo arp-scan --retry=8 --ignoredups -I en0 192.168.1.0/24
+Interface: en0, datalink type: EN10MB (Ethernet)
+Starting arp-scan 1.9 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/)
+192.168.1.4     20:7d:74:.......   Apple
+192.168.1.3     28:92:4a:.......   Hewlett Packard
+192.168.1.24    00:15:af:.......   AzureWave Technologies, Inc.
+192.168.1.254   f4:ca:e5:.......   FREEBOX SA
+192.168.1.19    3c:77:e6:.......   Hon Hai Precision Ind. Co.,Ltd.
+192.168.1.50    28:cf:da:.......   Apple, Inc.
+```
+
+So with a little raspberry pi (which is a small computer on a chip, bought for 30 €) and a wifi dongle, we're able to count the devices and even know their types.
+
+This first measurement gives intersting results but fails when you're not connected, when your phone is idle or because you wear many connected devices.
 
 
 ## Computer vision
 
-Let's talk about some computer vision now. So what is a humain for a computer ? Well it's a pretty hard question and that's is the difference between you (the fact that you know their is a difference between a humain and a chair) and many number and no learning. 
+As human, we count people by looking at them. What if we could teach our small computer to do the same. The computer, given a picture of the scene, should be able to detect human faces and count them. The exercise is not so easy: you and I have been seing human faces and chairs for years and we know how to make a difference. The computer has to catch up this learning process in a few hours. 
 
-Therefore, you have to feed your learning database's pictures with some postive pictures of humain (crop of upper body). thereafter you have to indicate what isn't a humain. For this part, I took some pictures of our cowerking space with no body inside and randomly crop them.
+You must feed him with examples: this is what we call the learning database. One one side, some postive pictures of humain (crop of upper body). One the other side, some negative pictures that can be anything except a human (pieces of walls, chairs, bags on the floor etc).
 
-Ok you have the first step, now time to play with opencv's parameters ! Training a model can be easy, build a good one can be long and choose the right one need some skills.
+Once the database is created (by hand mostly), we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer learn what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of model I tested:
 
 <iframe width="800" height="600" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~babou/62.embed?width=800&height=600"></iframe>
 
-Here is a benchmarck of model I tested. you can read it as if the box's model is below 0, your model find more humains as he should and conversely. Build a model is like an adventure and the mean progress (red line) shows it. You have to wonder why I don't stop my model making with the gray one (test 27) with a mean of 1.14, it seems pretty good! Well calculate difference between a picture with 8 humains and 8 positive matchs is a good indicator. But your 8 matchs can be falses positives and it was the case...
+If the box is below zero, the model finds more humans as it should, if it is above zero, it doesn't find all the humans. 
 
-So I decided to improve my database picture's. I added many positive (131 to 600) and I crop manualy some negative (606 negative). In fact in my previous models, I saw many false positive match with bag, coat on chair and shoes . So I crop it to feed my new model and to teach him what isn't a humain. I build a new one with my custom made picture (600 postive / 606 negative) and the result was catastrophic (test 33). 
+The red line representing the mean progress of each model shows that building a model is an iterative process. The grey box of the test 27 shows a pretty nice result. But a closer look at the results (using images with green box as the cover) reveals that they where both false postive and missed people and the two phenomenon ballanced each others. 
 
-In my previous model, I randomly crop hundreds or thousands of our empty space. That is the context of our picture, and context has a huge importance ! For the test 34, I just added less than a thousand of context negative pictures, the result is way better. Next I increased it to note improvement, there are far less false postive. The model is still not perfect but he is quite good now.
+So instead of only automatically generated negative samples (when you take few pictures with no one and you slice them randomly), we added manually croped negative images representing objects like bags, chairs, shoes... and after some more work it converged to a far better result with less false postive.
 
+**As the image analysis is made inside the sensor (composed of a rapsberry pi and a camera) the only thing that comes out is the number of people present at that moment, which ensures privacy by design.**
 
+The model is still not perfect and it is impossible to detect faces that overide on the image or are too small, however it is another intersting measurment.
 
-## next steps
+## Next steps
 
-Ajout de feature
-- Gestion des erreurs pour du ML :
-    Avec l’ensemble des features ==> prendre des mesures réel pour nourrir un ML
-        - Niveau sonore
-        - Luminosité
-        - Météo
-        - Calendrier
-        ( Source purement Nodesque
-            - Evènement interne du Node
-        )
-        -packet sniffing ...
+Neither ot the two measurment above are perfect but they give inforamtion. The next steps on this side project is to measure other features:
 
-Faire de la prédiction
+- noise level: when there is an external event, it could help the two previous techniques
+- brightness: the lamps automatically turn off when nobody is around them
+- C02 level (suggested by @fxbodin)
+- external weather
+- calendar data ...
 
-- Deep Learning VS Opencv
+and then we could train a model to infer the exact number of people based on these inputs...
+
+more fun to come.
 
 
