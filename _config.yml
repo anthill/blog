@@ -22,7 +22,7 @@ paginate:	5
 url: "http://ants.builders/blog/"
 site_url: "http://ants.builders/"
 baseurl: "http://ants.builders/blog/"
-permalink: /:day-:month-:year/:title.html
+permalink: /blog/:day-:month-:year/:title.html
 
 # social icons and sharing options
 social:
