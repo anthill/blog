@@ -19,9 +19,9 @@ author_image: "/assets/images/author.jpg"
 
 paginate:	5
 
-url: "http://ants.builders/"
-baseurl: ""
-permalink: blog/:day-:month-:year/:title.html
+url: "http://anthill.github.io/"
+baseurl: "/blog"
+permalink: /:day-:month-:year/:title.html
 
 # social icons and sharing options
 social:

@@ -5,7 +5,7 @@ ANTS blog
 
 - clone
 - Install the [GitHub Pages gem](https://github.com/github/pages-gem) (includes Jekyll): `bundle install`
-- Run the jekyll server: `jekyll serve`
+- To see the blog locally: `bundle exec jekyll serve --baseurl ''`
 
 You should have a server up and running locally at <http://localhost:4000>.
 
