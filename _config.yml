@@ -1,0 +1,55 @@
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+
+# Site settings
+title: "ANTS' blog"
+description: > # this means to ignore newlines until "email:"
+   A place for fun, ideas and community
+
+email: contact@ants.builders
+#blog logo
+logo: "/assets/images/ants_logo.png"
+# blog cover
+cover: "/assets/images/crowd.jpg"
+
+name: 'ANTS'
+author: 'ANTS'
+author_image: "/assets/images/author.jpg"
+
+paginate:	5
+
+url: "http://anthill.github.io/blog/"
+site_url: "http://ants.builders/"
+baseurl: ""
+permalink: /:day-:month-:year/:title.html
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/beingAnts
+    desc: Follow us on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: //www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/anthill
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
