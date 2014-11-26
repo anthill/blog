@@ -57,7 +57,7 @@ body
     line-height: 1em
     font-weight: lighter
 .teaserimage
-  height: 450px
+  height: 250px
   position: relative
   overflow: hidden
   background-color: #000
@@ -71,60 +71,45 @@ body
     bottom: 0
     z-index: 1
     text-indent: -9999px
-
-.blog-header
-  width: 100%
-  max-width: 640px
-  margin: 0 auto
-  position: relative
-  padding: 0
-  @include box-sizing(border-box)
-  @include respond-to(800)
-    padding: 0 $rs
-  .blog-logo
-    width: $rs*7.5
-    height: $rs*7.5
-    position: absolute
-    top: -$rs*3.75
-    right: 50%
-    margin-right: -$rs*3.75
-    background-size: cover
-    border-radius: 50%
+  .blog-header
+    width: 100%
+    position: relative
     z-index: 99
-    text-indent: -9999px
-    border: 3px solid #fff
-    background-color: #fff
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-  .blog-title
-    margin: 0
-    padding: $rs*5.25 $rs $rs/2
-    font-size: 50px
+    max-width: 640px
+    padding: 10px 0 90px
     text-align: center
-    font-weight: 700
-    letter-spacing: -2px
-    outline: 0
-    line-height: 50px
-    word-break: break-word
-    color: #333
-  .blog-description
-    margin: 0 0 20px
-    padding: 0 $rs*2
-    font-size: $rs/8*9
-    line-height: 1.5
-    color: #666
-    text-align: center
-    font-weight: 400
-  .custom-links
-    margin: 0 0 50px
-    text-align: center
-    color: #ccc
-    a
-      text-decoration: none
-      color: #999
-      &:hover
-        color: #333
+    margin: 0 auto
+    @include box-sizing(border-box)
+    @include respond-to(800)
+    color: white
+    text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.8), 0px 0px 1px rgba(0, 0, 0, 0.8)
+    .blog-title
+      margin: 0
+      padding: $rs*3 $rs $rs/2
+      font-size: 50px
+      text-align: center
+      font-weight: 700
+      letter-spacing: -2px
+      outline: 0
+      line-height: 50px
+      word-break: break-word
+    .blog-description
+      margin: 0 0 20px
+      padding: 0 $rs*2
+      font-size: $rs/8*9
+      line-height: 1.5
+      text-align: center
+      font-weight: 400
+    .custom-links
+      margin: 0 0 50px
+      text-align: center
+      a
+        text-decoration: none
+        color: white
+        &:hover
+          color: #DBB460
+  
+
 
 .content
   width: 100%
