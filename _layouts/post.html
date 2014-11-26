@@ -17,7 +17,7 @@
             <div class="cf post-meta-text">
               <div class="post-authors">
                 {% for author in page.authors %}
-                  <div class="author-image" style="background-image: url({{ author.github_image }})">Blog Logo</div>
+                  <div class="author-image" style="background-image: url({{ author.github_image }})">{{ author.name }}</div>
                   <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.name }}</h4>
                   <br/>
                 {% endfor %}

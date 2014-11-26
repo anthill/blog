@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A collaborative scanner based on raspberry pi"
+title:  "A collaborative scanner based on Raspberry Pi"
 subtitle: "Hacking the Node, part 2"
 authors:
   - name:   Romain Crestey
@@ -11,7 +11,10 @@ authors:
     github_image: "https://avatars3.githubusercontent.com/u/371303?"
 date:   2014-11-25 14:34:25
 categories: post
-tags: featured
+tags: 
+  - open hardware
+  - hacking
+  - computer vision
 image: /assets/article_images/collaborative-scanner-with-rapsberry-pi/cover.jpg
 ---
 
