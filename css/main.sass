@@ -10,8 +10,7 @@
 
 $rs: 16px
 
-$font-serif: Linux Libertine
-$font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
+$font-sans: 'Raleway', sans-serif
 
 
 @mixin respond-to($breakpoint)
@@ -29,7 +28,6 @@ body
   margin: 0
   padding: 0
   text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
   -moz-font-feature-settings: "liga=1, dlig=1"
   -ms-font-feature-settings: "liga", "dlig"
   -webkit-font-feature-settings: "liga", "dlig"
@@ -40,21 +38,24 @@ body
   position: fixed
   left: 10px
   top: 10px
-  width: $rs*13
-  height: $rs*3
-  background-color: #000
+  width: 240px
+  height: 20px
+  background-color: rgba(77, 77, 77, 0.8)
   overflow: hidden
   z-index: 99
+  text-decoration: none
+  padding: 1rem
+  display: inline-block
+  line-height: 1em
   .logo
-    display: block
-    position: absolute
-    top: $rs/2
-    left: $rs/2
-    width: $rs*12
-    height: $rs*2
-    background-size: cover
-    background-repeat: no-repeat
-
+    font-size: 1.4rem
+    font-weight: 900
+    margin: 0 10px
+    color: #DBB460
+  .sublogo
+    color: white
+    line-height: 1em
+    font-weight: lighter
 .teaserimage
   height: 450px
   position: relative
@@ -347,7 +348,7 @@ body
       text-overflow: ellipsis
   .post-content
     width: 100%
-    font-family: $font-serif
+    font-family: $font-sans
     color: #333
     h1, h2, h3
       font-family: $font-sans
