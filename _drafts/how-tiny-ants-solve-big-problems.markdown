@@ -18,6 +18,7 @@ tags:
   - design
   - front end
 image: /assets/article_images/how-tiny-ants-solve-big-problems/cover.jpg
+credits: Geoff Gallice from Gainesville, FL, USA - Army ant bivouac, CC BY 2.0
 ---
 
 To be written.

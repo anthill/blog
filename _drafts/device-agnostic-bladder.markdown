@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Device agnostic bladder"
-subtitle: "Or prviding accessibility app through the web"
+subtitle: "Providing accessibility through the web"
 authors:
   - name:   Romain Crestey
     twitter:    https://twitter.com/OursonEnPeluche
@@ -18,6 +18,7 @@ tags:
   - accessibilty
   - mobile
 image: /assets/article_images/device-agnostic-bladder/cover.jpg
+credits: toilet, Martin Abegglen, Barcelona, CC BY-SA 2.0
 ---
 
 To be written.
