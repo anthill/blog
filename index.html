@@ -41,7 +41,9 @@ layout: default
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
               <div class="post-authors">
                 {% for author in post.authors %}
-                  <div class="author-image" style="background-image: url({{ author.github_image }})">{{ author.name }}</div>
+                  <a href="{{ author.twitter }}" target="_blank">
+                    <div class="author-image" style="background-image: url({{ author.github_image }})">{{ author.name }}</div>
+                  <a>
                 {% endfor %}
               </div>
               <span class="post-tags-set">on 

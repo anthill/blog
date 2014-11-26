@@ -4,7 +4,7 @@ title:  "A collaborative scanner based on Raspberry Pi"
 subtitle: "Hacking the Node, part 2"
 authors:
   - name:   Romain Crestey
-    twitter:    https://twitter.com/iOiurson
+    twitter:    https://twitter.com/OursonEnPeluche
     github_image: "https://avatars0.githubusercontent.com/u/8417814?"
   - name:   Alexandre Vallette
     twitter:    https://twitter.com/vallettea
