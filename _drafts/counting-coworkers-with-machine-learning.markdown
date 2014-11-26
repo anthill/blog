@@ -33,9 +33,9 @@ There are many reasons why we wanted to measure the number of people working the
 - know when the space is opened (not everybody can open the space and a lot of people would come earlier or on week ends if they knew it was possible)
 - understand what are the main factors pushing people to come and work and to predict peaks of affluence.
 
-Here is the result showing in real time all these measurments. It's a stream plot (made with [plot.ly](http://plot.ly)). For the convenience of this post, we extracted just one day of data:
+[Here](https://plot.ly/~beingAnts/0/affluence/) is the result showing in real time all these measurements. It's a stream plot (made with [plot.ly](http://plot.ly)). For the convenience of this post, we extracted just one day of data:
 
-
+<iframe width="800" height="600" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~beingAnts/1.embed?width=800&height=600"></iframe>
 
 ## Network footprint
 
@@ -63,16 +63,16 @@ Starting arp-scan 1.9 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/
 
 So with a little raspberry pi (which is a small computer on a chip, bought for 30 €) and a wifi dongle, we're able to count the devices and even know their types.
 
-![All the measurments are done by this Raspberry Pi, a 30 € little computer connected to a camera.](/assets/article_images/counting-coworkers-with-machine-learning/raspberry.jpg "Raspberry Pi")
+![All the measurements are done by this Raspberry Pi, a 30 € little computer connected to a camera.](/assets/article_images/counting-coworkers-with-machine-learning/raspberry.jpg "Raspberry Pi")
 
-Measuring the network footprint gives intersting results but fails when you're not connected, when your phone is idle or because you wear many connected devices.
+Measuring the network footprint gives interesting results but fails when you're not connected, when your phone is idle or because you wear many connected devices.
 
 
 ## Computer vision
 
-As human, we count people by looking at them. What if we could teach our small computer to do the same. The machine, given a picture of the scene, should be able to detect human faces and count them. The exercise is not so easy: you and I have been seing human faces and chairs for years and we know how to make the difference. The computer has to catch up this learning process in a few hours. 
+As human, we count people by looking at them. What if we could teach our small computer to do the same. The machine, given a picture of the scene, should be able to detect human faces and count them. The exercise is not so easy: you and I have been seeing human faces and chairs for years and we know how to make the difference. The computer has to catch up this learning process in a few hours. 
 
-We must feed him with examples: this is what we call the learning database. On one side, some postive pictures of humans (crop of upper body). On the other side, some negative pictures that can be anything except an human (pieces of walls, chairs, bags on the floor etc).
+We must feed him with examples: this is what we call the learning database. On one side, some positive pictures of humans (crop of upper body). On the other side, some negative pictures that can be anything except an human (pieces of walls, chairs, bags on the floor etc).
 
 Once the database is created (by hand mostly), we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer understand what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of model we tested:
 
@@ -80,17 +80,17 @@ Once the database is created (by hand mostly), we use a learning algorithm (in t
 
 If the box is below zero, the model finds more humans as it should, if it is above zero, it doesn't find all the faces in the picture. 
 
-The red line representing the mean progress of each model shows that building a model is an iterative process. The grey box of the test 27 shows a pretty nice result. But a closer look at the results (using images with green box as the cover) reveals that they where both false postive and missed people and the two phenomenon ballanced each others. 
+The red line representing the mean progress of each model shows that building a model is an iterative process. The grey box of the test 27 shows a pretty nice result. But a closer look at the results (using images with green box as the cover) reveals that they where both false positive and missed people and the two phenomenon balanced each others. 
 
-So instead of only automatically generated negative samples (this is when you take few pictures with no one and you slice them randomly), we added manually cropped negative images representing objects like bags, chairs, shoes... We started with only our manually cropped samples and it was catastrophic (test 33) and it made us realise how important the context was. With both the context provided by automatically cropped images and hand specificities, the model converged to a far better result with less false postive.
+So instead of only automatically generated negative samples (this is when you take few pictures with no one and you slice them randomly), we added manually cropped negative images representing objects like bags, chairs, shoes... We started with only our manually cropped samples and it was catastrophic (test 33) and it made us realise how important the context was. With both the context provided by automatically cropped images and hand specificities, the model converged to a far better result with less false positive.
 
-As the **image analysis is made inside the sensor** the only accesible data is only the number of people, no images, nothing else. This **ensures privacy by design.**
+As the **image analysis is made inside the sensor** the only accessible data is only the number of people, no images, nothing else. This **ensures privacy by design.**
 
-The model is still not perfect and it's impossible to detect faces that overide on the image or are too small. However it's another intersting measurment.
+The model is still not perfect and it's impossible to detect faces that override on the image or are too small. However it's another interesting measurement.
 
 ## Next steps
 
-Neither ot the two techniques above are perfect but they give inforamtion. The next steps on this side project is to measure other features:
+Neither of the two techniques above are perfect but they give information. The next steps on this side project is to measure other features:
 
 - noise level: when there is an external event, it could help the two previous techniques
 - brightness: each lamp automatically turns off when nobody is around it
