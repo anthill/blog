@@ -63,7 +63,7 @@ Starting arp-scan 1.9 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/
 
 So with a little raspberry pi (which is a small computer on a chip, bought for 30 €) and a wifi dongle, we're able to count the devices and even know their types.
 
-![All the measurements are done by this Raspberry Pi, a 30 € little computer connected to a camera.](/assets/article_images/counting-coworkers-with-machine-learning/raspberry.jpg "Raspberry Pi")
+![All the measurements are done by this Raspberry Pi, a 30 € little computer connected to a camera.](/blog/assets/article_images/counting-coworkers-with-machine-learning/raspberry.jpg "Raspberry Pi")
 
 Measuring the network footprint gives interesting results but fails when you're not connected, when your phone is idle or because you wear many connected devices.
 
