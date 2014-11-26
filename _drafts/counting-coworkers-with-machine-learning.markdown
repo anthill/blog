@@ -65,7 +65,7 @@ As human, we count people by looking at them. What if we could teach our small c
 
 You must feed him with examples: this is what we call the learning database. One one side, some postive pictures of humain (crop of upper body). One the other side, some negative pictures that can be anything except a human (pieces of walls, chairs, bags on the floor etc).
 
-Once the database is created (by hand mostly), we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer learn what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of model I tested:
+Once the database is created (by hand mostly), we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer learn what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of model we tested:
 
 <iframe width="800" height="600" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~babou/62.embed?width=800&height=600"></iframe>
 
@@ -73,7 +73,7 @@ If the box is below zero, the model finds more humans as it should, if it is abo
 
 The red line representing the mean progress of each model shows that building a model is an iterative process. The grey box of the test 27 shows a pretty nice result. But a closer look at the results (using images with green box as the cover) reveals that they where both false postive and missed people and the two phenomenon ballanced each others. 
 
-So instead of only automatically generated negative samples (when you take few pictures with no one and you slice them randomly), we added manually croped negative images representing objects like bags, chairs, shoes... and after some more work it converged to a far better result with less false postive.
+So instead of only automatically generated negative samples (when you take few pictures with no one and you slice them randomly), we added manually croped negative images representing objects like bags, chairs, shoes... We tested a model with only our manually cropped and it was catastrophic (test 33) so after some more work and adding context, it converged to a far better result with less false postive.
 
 **As the image analysis is made inside the sensor (composed of a rapsberry pi and a camera) the only thing that comes out is the number of people present at that moment, which ensures privacy by design.**
 
