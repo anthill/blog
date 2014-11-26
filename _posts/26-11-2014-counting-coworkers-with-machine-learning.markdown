@@ -23,14 +23,12 @@ image: /assets/article_images/counting-coworkers-with-machine-learning/cover.jpg
 
 How can we automatically **measure the number of people in a public space while respecting privacy** ? We've designed a cheap and fun solution that could do the trick.
 
-We love our coworking space. It's a place we feel home and it's better than having our own offices as we constantly meet new people. Besides, a lot of our friends whom we like to share the space with, are doing things that have nothing to do with our geeky stuff.
-
-This eden of creativity is called "[Le Node](http://bxno.de/)" and is located in the historic center of Bordeaux. It's a collaborative space, meaning everybody helps running the place. 
+We love our coworking space. It's a place we feel at home and it's better than having our own offices as we constantly meet new people. This eden of creativity is called "[Le Node](http://bxno.de/)" and is located in the historic center of Bordeaux. It's a collaborative space, meaning everybody helps running the place. 
 
 There are many reasons why we wanted to measure the number of people working there:
 
-- be able to give a feedback to our sponsors (the city mayor or Bordeaux)
-- know when the space is opened (not everybody can open the space and a lot of people would come earlier or on week ends if they knew it was possible)
+- be able to give a feedback to our sponsors (like the City of Bordeaux)
+- know when the space is open (not everybody can open the space and a lot of people would come earlier or on week ends if they knew it was possible)
 - understand what are the main factors pushing people to come and work and to predict peaks of affluence.
 
 [Here](https://plot.ly/~beingAnts/0/affluence/) is the result showing in real time all these measurements. It's a stream plot (made with [plot.ly](http://plot.ly)). For the convenience of this post, we extracted just one day of data:
@@ -72,9 +70,9 @@ Measuring the network footprint gives interesting results but fails when you're 
 
 As human, we count people by looking at them. What if we could teach our small computer to do the same. The machine, given a picture of the scene, should be able to detect human faces and count them. The exercise is not so easy: you and I have been seeing human faces and chairs for years and we know how to make the difference. The computer has to catch up this learning process in a few hours. 
 
-We must feed him with examples: this is what we call the learning database. On one side, some positive pictures of humans (crop of upper body). On the other side, some negative pictures that can be anything except an human (pieces of walls, chairs, bags on the floor etc).
+We must feed it with examples: this is what we call the learning database. On one side, some positive pictures of humans (crop of upper body). On the other side, some negative pictures that can be anything except an human (pieces of walls, chairs, bags on the floor etc).
 
-Once the database is created (by hand mostly), we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer understand what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of model we tested:
+Once the database (mostly manually) created, we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer understand what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of model we tested:
 
 <iframe width="800" height="600" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~babou/62.embed?width=800&height=600"></iframe>
 
@@ -90,7 +88,7 @@ The model is still not perfect and it's impossible to detect faces that override
 
 ## Next steps
 
-Neither of the two techniques above are perfect but they give information. The next steps on this side project is to measure other features:
+Neither of the two techniques above are perfect but they give information. The next steps on this side project are to measure other features:
 
 - noise level: when there is an external event, it could help the two previous techniques
 - brightness: each lamp automatically turns off when nobody is around it
