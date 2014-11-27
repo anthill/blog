@@ -28,8 +28,8 @@ We love our coworking space. It's a place we feel at home and it's better than h
 There are many reasons why we wanted to measure the number of people working there:
 
 - be able to give a feedback to our sponsors (like the City of Bordeaux)
-- know when the space is open (not everybody can open the space and a lot of people would come earlier or on week ends if they knew it was possible)
-- spot and understand the main factors pushing people to come and work and to predict peaks of affluence.
+- know when the space is open (The official hours are 9AM to 6PM but some people can open earlier or close later. It would be nice for everybody to have the information.)
+- spot and understand the main factors pushing people to come and work and to predict peaks of attendance.
 
 [Here](https://plot.ly/~beingAnts/0/affluence/) is the result showing in real time all these measurements. It's a stream plot (made with [plot.ly](http://plot.ly)). For the convenience of this post, we extracted just one day of data:
 
@@ -72,7 +72,7 @@ As human, we count people by looking at them. What if we could teach our small c
 
 We must feed it with examples: this is what we call the learning database. On one side, some positive pictures of humans (crop of upper body). On the other side, some negative pictures that can be anything except a human (pieces of walls, chairs, bags on the floor etc).
 
-Once the database (mostly manually) created, we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer understand what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmarck of the model we tested:
+Once the database (mostly manually) created, we use a learning algorithm (in this case Haar-cascades). Training a model can be easy, make the computer understand what we want can be strenuous. It requires skills and patience to chose the correct parameters. Here is a benchmark of the model we tested:
 
 <iframe width="800" height="600" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~babou/62.embed?width=800&height=600"></iframe>
 
@@ -81,6 +81,8 @@ If the box is below zero, the model finds more humans than it should, if it is a
 The red line representing the mean progress of each model shows that building a model is an iterative process. The grey box of the test 27 shows a pretty nice result. But a closer look at the results (using images with green box as the cover) reveals that they were both false positive and missed people and the two phenomenon balanced each others. 
 
 So instead of only automatically generated negative samples (this is when you take few pictures with no one and you slice them randomly), we added manually cropped negative images representing objects like bags, chairs, shoes... We started with only our manually cropped samples and it was catastrophic (test 33) and it made us realize how important the context was. With both the context provided by automatically cropped images and hand specificities, the model converged to a far better result with less false positive.
+
+To create the learning database, we extracted about 500 pictures that we cropped. Once the model is trained, no more need to keep any pictures: the sensor takes a picture, analyses it and dumps it.
 
 As the **image analysis is made inside the sensor** the only accessible data is the number of people, no images, nothing else. This **ensures privacy by design.**
 
