@@ -102,4 +102,5 @@ and then we could train a model to infer the exact number of people based on the
 
 more fun to come.
 
+The source code for this can be found on [GitHub](https://github.com/anthill/nodeKeeper).
 
