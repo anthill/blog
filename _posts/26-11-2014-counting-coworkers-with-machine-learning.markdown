@@ -10,7 +10,7 @@ authors:
     twitter:    https://twitter.com/vallettea
     github_image: "https://avatars3.githubusercontent.com/u/371303?"
     bio: Data-scientist, founder of ANTS, his passion for machine-learning applied to geographical data and networks comes from his Phd in chaos theory. Open-data enthusiast, he is committed to show how open-innovation can lead to a better governance and economy.
-date:   2014-11-25 14:34:25
+date:   2014-11-26 14:34:25
 categories: post
 tags: 
   - privacy
@@ -61,7 +61,7 @@ Starting arp-scan 1.9 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/
 
 So with a little raspberry pi (which is a small computer on a chip, bought for 30 €) and a wifi dongle, we're able to count the devices and even know their types.
 
-![All the measurements are done by this Raspberry Pi, a 30 € little computer connected to a camera.](/blog/assets/article_images/counting-coworkers-with-machine-learning/raspberry.jpg "Raspberry Pi")
+![All the measurements are done by this Raspberry Pi, a 30 € little computer connected to a camera.]({{ site.baseurl }}/assets/article_images/counting-coworkers-with-machine-learning/raspberry.jpg "Raspberry Pi")
 
 Measuring the network footprint gives interesting results but fails when you're not connected, when your phone is idle or because you wear many connected devices.
 
