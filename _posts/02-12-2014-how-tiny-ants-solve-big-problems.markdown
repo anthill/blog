@@ -49,6 +49,10 @@ There is only one single rule for each ant to decide which edge to choose:
 
 On the edges representing the letters, we've put high-class honey. See what happens!
 
+And this kind of collective intelligence can be found in many swarm like colony. [A recent article](http://physics.aps.org/articles/v7/120) studies fly swarms with statistical physics tools. The results are impressive: a swarm is in not as chaotic as it looks like and is always near a transition point between grouped movement and anarchy. There is a reason for this:
+
+"If the system is too ordered, it cannot adapt or respond to change in its environment; if it is too disordered, the response may not be strong enough."
+
 We are not entomologists, so we're not really here to discuss insects. But what does strike us and what we want to share, is this vision: ***so much can be achieved with good collaboration***.
 
 
@@ -56,6 +60,7 @@ We are not entomologists, so we're not really here to discuss insects. But what 
 - **communication**: no hierarchy in communication. Everyone should be able to talk to anyone else without any intermediaries. Intermediaries are bottlenecks and tend to concentrate power;
 - **distributed power**: each ant is free and can choose to take another path. This is the key element for finding the optimal path. 
 - **resilience**: look what happens when you hover your mouse on top of these ants. Working as a colony is almost unstoppable.
+- **disorder**: spurs innovation and rapid adaptation to changing environment
 
 Let's keep that in mind for our organization.
 
