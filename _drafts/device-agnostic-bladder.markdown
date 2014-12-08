@@ -30,7 +30,7 @@ Well, if you think about it, this is most often the consequence of two situation
 
 ![Yeah, he's teasing you]({{ site.baseurl }}/assets/article_images/device-agnostic-bladder/Bruxelles_Manneken_Pis.jpg "Manneken Pis in Brussels, Belgium. Myrabella / Wikimedia Commons / CC-BY-SA-3.0")
 
-2) you're hanging out with friends at your favorite pub, drinking quite a few beers. From the second pint on, you've been going to the toilets every half hour, because, well, ... beers. Now you're on your way home, and it's already been half an hour since you last peed.
+2) you're hanging out with friends at your favorite pub, drinking quite a few beers. From the second pint on, you've been going to the toilets every half hour, because, well... beers. Now you're on your way home, and it's already been half an hour since you last peed.
 
 ![Drink responsibly !]({{ site.baseurl }}/assets/article_images/device-agnostic-bladder/Beer_newcastle.jpg "Beer, A pint of beer...Barcamp North East 2 Sunday evening, Drink. Author: Tim Dobson. Wikipedia Commons")
 
@@ -42,11 +42,11 @@ This is a very commun situation, which can be easily solved by providing a map o
 
 Only Android.
 
-Now you do have a phone with Android, and you'll be ok. But what if you have an iPhone with iOs? Or a phone with Firefox OS, or a Windows Phone ?
+Now you do have a phone with Android, and you'll be ok. But what if you have an iPhone with iOS? Or a phone with Firefox OS, or a Windows Phone?
 
-This discrimination based on the device - hence the OS - you're using on your phone is quite problematic. Such applications of common use should be available to anyone, regardless of what phone they like best. Of course, one solution is to develop as many applications as there are different OS. But we don't want to do that. It's clearly a waste of time.
+This discrimination based on the OS/device is quite problematic. Such applications of common use should be available to anyone, regardless of what phone they like best. Of course, one solution is to develop as many applications as there are different OS. But we don't want to do that. It's clearly a waste of time.
 
-What is common to all modern phones is a native browser. These all work basically the same way. Develop once, and make it available to all.
+What is common to all modern phones is a web browser. These all work basically the same way. Develop once, and make it available to all.
 So why not make a WebApp ?
 
 With the data from opendata.bordeaux.fr, it's actually pretty easy to pin the toilet locations on a map layer provided by, say, Mapbox, or equivalent. But this is not quite enough. Remember, you desperately need to pee. And the brand new app you've just downloaded gives you points on a map. Okay, you can read a map, you could find out where you are and which toilet is closest to your position. But you are not really in the mood for brain work right now. The information you need ("WHERE IS THAT GODDAMN TOILET ?"), you need it fast.
@@ -66,10 +66,10 @@ The app also gives you the possibility to filter toilet types, and reprocesses a
 
 If you're just being curious, you might to want to check how much time it would take you to go pee to the opposite side of the city. You can access that information by clicking the pin you're curious about. And back to the actual useful informations clicking on your position.
 
-This is, to our sense, an appropriate compromise between useful functionalities and simple design. This kind of app shouldn't be doing much more, and certainly not any less.
+This is, to our sense, an appropriate trade-off between having lots of features while keeping a minimal design. This kind of app shouldn't be doing much more, and certainly not any less.
 
 You can find it at this address : [http://ants.builders/ToilettesBordeaux/](http://ants.builders/ToilettesBordeaux/)
 
-Oh wait ! You might not like the fact that this app is embedded inside your browser. Fair enough, we understand that. You can export a standalone version of the app just by clicking on the "Add on desktop" button (or equivalent) of your browser. Then you'll get just the app. No more browser. Just the app. And you'll always have the most recent update, without doing anything.
+Oh wait ! You might not like the fact that this app is embedded inside your browser. Fair enough, we understand that. All mobile browsers have a way to install a standalone version of the web app just by clicking on the "Add on desktop" button (or equivalent). Then you'll get just the app. No more browser. Just the app. And you'll always have the most recent update, without doing anything.
 
 This is what the web should be: useful and accessible, to everyone.
