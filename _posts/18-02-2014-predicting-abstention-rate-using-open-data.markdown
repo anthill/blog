@@ -19,7 +19,7 @@ credits: Geoff Gallice from Gainesville, FL, USA - Army ant bivouac, CC BY 2.0
 
 The purpose of this post is to guide beginners in data-science by illustrating how open data can be used to predict the [voting abstention rate at the 2008 mayoral elections in France](http://www.data.gouv.fr/fr/dataset/elections-municipales-2008-resultats-572150).
 
-At Snips, we believe open data is the key to solving many problems we experience on a daily basis. Being able to access high quality data about how our society works is a first step towards a more transparent, better democracy. 
+At ANTS, we believe open data is the key to solving many problems we experience on a daily basis. Being able to access high quality data about how our society works is a first step towards a more transparent, better democracy. 
 We are hoping that hacking with data will be seen by the next generation as a way to express and prove powerful ideas. This is why [we are open sourcing](https://github.com/vallettea/politics-open-data) projects like this one. 
 
 This post will cover three aspects of datascience:
