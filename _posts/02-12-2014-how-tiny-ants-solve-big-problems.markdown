@@ -11,7 +11,7 @@ authors:
     twitter:    https://twitter.com/vallettea
     github_image: "https://avatars3.githubusercontent.com/u/371303?"
     bio: Data-scientist, founder of ANTS, his passion for machine-learning applied to geographical data and networks comes from his Phd in chaos theory. Open-data enthusiast, he is committed to show how open-innovation can lead to a better governance and economy.
-date:   2014-11-25 14:34:25
+date:   2014-12-02 14:34:25
 categories: post
 tags: 
   - collective intelligence
