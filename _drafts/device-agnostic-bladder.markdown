@@ -38,31 +38,38 @@ Well, if you think about it, this is most often the consequence of two situation
 Sometimes, you are strong enough to hold your wee, sometimes not. And you end up buying a coffee you'll never drink just to use a restaurant's bathroom, or finding yourself a hidden spot between two cars to unleash the stream.
 Neither of these last minute solutions is really acceptable, being absurd or non-civic, and you wish you'd know where a public toilet actually stands.
 
-This is a very common situation, and **it is not solved by providing a map of the public toilets in a city**. 
+This is a very common situation, and **providing a simple map of the public toilets is not good enough**. 
 
-## The toilet problem is solved by accessibility and design
+**This toilet problem is solved by accessibility and design.**
 
 
-Accessibility. In the case of our city, Bordeaux, [this app](http://www.androidpit.fr/application/com.wpetit.android.toilettes.bordeaux) is already available. On Android.
+## Accessibility
+*Everyone should have the right to pee.*
 
-Only Android.
+In the case of our city, Bordeaux, such apps are already available. On Android and iOS.
 
-Now you do have a phone with Android, and you'll be ok. But what if you have an iPhone with iOS? Or a phone with Firefox OS, or a Windows Phone?
+Only.
 
-This discrimination based on the OS/device is quite problematic. Such **applications of common good use should be available to anyone, regardless of what phone they like best**. Of course, one solution is to develop as many applications as there are different OS. But we don't want to do that. It's clearly a waste of time, especially when the basic need is pins on map.
+Now you do have a phone with Android or an iPhone, and you'll be ok. But what about phones with Firefox OS, or Windows Phones? What about future devices with OS that haven't been created yet?
 
-Common to all smart phones is the web browser. These all work basically the same way. Develop once, and make it available to all (in theory).
-So why not make a WebApp ?
+This discrimination based on the OS/device has no reasons to be. Such **applications of common need should be available to anyone, regardless of what phone they like best**. Of course, one solution is to develop as many applications as there are different OS. But we don't want to do that, it would clearly be a waste of time.
 
-With the data from opendata.bordeaux.fr, it's actually pretty easy to pin the toilet locations on a map layer provided by, say, Mapbox, or equivalent. But this is not enough. Remember, you desperately need to pee. And the brand new app you've just downloaded gives you points on a map. Okay, you can read a map, you could find out where you are and which toilet is closest to your position. But you are not really in the mood for brain work right now. **The information you need ("WHERE IS THAT GODDAMN TOILET ?"), you need it fast.**
+All smartphones have a web browser. So by **developing a web app once**, and with very little extra code, it will be available to all.
 
-**This is where the UX kicks in.**
+ The basic need is pins on map. With web browsers, this can be achieved in **2 hours for all platforms**. Using the data from [opendata.bordeaux.fr](http://opendata.bordeaux.fr), combined with OpenStreetMap and Mapbox, it's actually pretty easy to pin the toilet locations on a map layer.
 
-* We want the user to be able to find the closest toilet as fast as possible. Or maybe the 3 closest, just in case one is occupied or broken. Other toilets are not really relevant.
+ But this is not enough.
 
-* The toilets you're looking for needs to be one you can use. You should be able to discard urinals if you're a girl, or to find only accessible toilets if you suffer from physical disability.
+ Remember, you desperately need to pee. And the brand new app you've just downloaded gives you points on a map. Okay, you can read a map, you could find out where you are and which toilet is closest to your position. But you are not really in the mood for brain work right now. **The information you need ("WHERE IS THAT GODDAMN TOILET ?"), you need it fast.**
 
-* Also, you don't really need to know the exact address, you just want to know the way to go, and your ETA (Estimated Time of Arrival)
+## Design
+*This is where the UX kicks in.*
+
+* We want the user to be able to find the closest toilet **as fast as possible**. Or maybe the 3 closest, just in case one is occupied or broken. Other toilets are not really relevant.
+
+* The toilet you're looking for needs to be **one you can use**. You should be able to discard urinals if you're a girl, or to find only accessible toilets if you suffer from physical disability.
+
+* Also, you don't really need to know the exact address, you just want to know **the way to go**, and your ETA (Estimated Time of Arrival)
 
 ![5 minutes and 25 seconds should be ok]({{ site.baseurl }}/assets/article_images/device-agnostic-bladder/screenshot.png "Screenshot of what the app looks like")
 
@@ -71,14 +78,17 @@ The app also gives you the possibility to filter toilet types, and reprocesses a
 
 If you're just being curious, you might to want to check how much time it would take you to go pee to the opposite side of the city. You can access that information by clicking the pin you're curious about. And back to the actual useful information clicking on your position.
 
-This is, to our sense, an appropriate trade-off between having lots of features while keeping a minimal design. This kind of app shouldn't be doing much more, and certainly not any less.
+This is, to our sense, an appropriate trade-off between having lots of features while keeping a minimal design. **This kind of app shouldn't be doing much more, and certainly not any less**.
 
-You can find it at this address : [http://ants.builders/ToilettesBordeaux/](http://ants.builders/ToilettesBordeaux/)
+We are aware that there are limitations in this app. For instance, it is only available for Bordeaux. But we see this app as a proof of concept. The next steps would be to collect toilet data from around the world, clean the datasets, and bundle it all in the app. We adapted the app for Paris just to see how much effort it would take us to make it possible. Not much more than 1 hour. So maybe in the future, we'll make this more universal.
 
-## Wait ! WebApp can look like native apps
+You can find the apps at: 
+[http://ants.builders/ToilettesBordeaux/](http://ants.builders/ToilettesBordeaux/)
+[http://ants.builders/ToilettesParis/](http://ants.builders/ToilettesParis/)
+
+## Oh wait, one last thing !
+*WebApps can look like native apps.*
 
 You might not like the fact that this app is embedded inside your browser. Fair enough, we understand that. **All mobile browsers have a way to install a standalone version of the web app** just by clicking on the "Add on desktop" button (or equivalent). Then you'll get just the app. No more browser. Just the app. And you'll always have the most recent update, without doing anything.
-
-
 
 **This is what the web should be: useful and accessible, to everyone.**
