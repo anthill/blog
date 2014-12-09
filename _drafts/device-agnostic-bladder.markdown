@@ -56,7 +56,7 @@ This discrimination based on the OS/device has no reasons to be. Such **applicat
 
 All smartphones have a web browser. So by **developing a web app once**, and with very little extra code, it will be available to all.
 
- The basic need is pins on map. With web browsers, this can be achieved in **2 hours for all platforms**. Using the data from [opendata.bordeaux.fr](http://opendata.bordeaux.fr), combined with OpenStreetMap and Mapbox, it's actually pretty easy to pin the toilet locations on a map layer.
+ The basic need is pins on map. With web browsers, this can be achieved in **2 hours for all platforms**. Using the data from [opendata.bordeaux.fr](http://opendata.bordeaux.fr), combined with [OpenStreetMap](http://www.openstreetmap.org/#map=5/51.500/-0.100), [Mapbox](https://www.mapbox.com) and [Leaflet](http://leafletjs.com), it's actually pretty easy to pin the toilet locations on a map layer.
 
  But this is not enough.
 
@@ -82,9 +82,11 @@ This is, to our sense, an appropriate trade-off between having lots of features 
 
 We are aware that there are limitations in this app. For instance, it is only available for Bordeaux. But we see this app as a proof of concept. The next steps would be to collect toilet data from around the world, clean the datasets, and bundle it all in the app. We adapted the app for Paris just to see how much effort it would take us to make it possible. Not much more than 1 hour. So maybe in the future, we'll make this more universal.
 
-You can find the apps at: 
-[http://ants.builders/ToilettesBordeaux/](http://ants.builders/ToilettesBordeaux/)
-[http://ants.builders/ToilettesParis/](http://ants.builders/ToilettesParis/)
+You can find the apps at:
+
+* [http://ants.builders/ToilettesBordeaux/](http://ants.builders/ToilettesBordeaux/)
+
+* [http://ants.builders/ToilettesParis/](http://ants.builders/ToilettesParis/)
 
 ## Oh wait, one last thing !
 *WebApps can look like native apps.*
