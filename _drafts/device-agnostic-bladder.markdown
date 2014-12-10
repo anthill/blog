@@ -88,9 +88,17 @@ You can find the apps at:
 
 * [http://ants.builders/ToilettesParis/](http://ants.builders/ToilettesParis/)
 
+If you want to contribute to this project, checkout
+[this GitHub repository.](https://github.com/anthill/ToilettesBordeaux/)
+
 ## Oh wait, one last thing !
 *WebApps can look like native apps.*
 
 You might not like the fact that this app is embedded inside your browser. Fair enough, we understand that. **All mobile browsers have a way to install a standalone version of the web app** just by clicking on the "Add on desktop" button (or equivalent). Then you'll get just the app. No more browser. Just the app. And you'll always have the most recent update, without doing anything.
 
 **This is what the web should be: useful and accessible, to everyone.**
+
+<iframe class="vine-embed" src="https://vine.co/v/OrPUOZDTIJD/card" width="600" height="600" frameborder="0"></iframe>
+<br/>
+
+
