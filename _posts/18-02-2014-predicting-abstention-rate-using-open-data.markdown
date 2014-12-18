@@ -185,7 +185,7 @@ Data scientists will always prefer raw, dirty datasets over clean aggregated one
 
 ## Building the predictive model: the power of context
 
-At Snips, we use context to make predictions: we don't learn from the past directly but we rather recreate the context in which the phenomenon to predict occurred. Historical modelling tells you *what* happened, but contextual modelling tells you *why* it happened!
+At ANTS, we use context to make predictions: we don't learn from the past directly but we rather recreate the context in which the phenomenon to predict occurred. Historical modelling tells you *what* happened, but contextual modelling tells you *why* it happened!
 
 <figure>
     <img src="{{ site.baseurl }}/assets/article_images/predicting-abstention-rate-using-open-data/2014-02-22_contextual.png" style="max-width:100%;">
@@ -283,7 +283,7 @@ The full code can be found in [contextualize.py](https://github.com/vallettea/po
 
 We previously plotted a static map of abstention rates in France. Displaying the context for each municipality is a hard visualization problem that requires powerful frontend libraries such as [d3.js](http://d3js.org/) and [leaflet](http://leafletjs.com/).
 
-With the help of [Tahar Zanouda](https://twitter.com/T_Zano) (doing his master thesis with us at Snips) and [David Bruant](https://twitter.com/DavidBruant), we plot this on a map to explore it visually.
+With the help of [Tahar Zanouda](https://twitter.com/T_Zano) (doing his master thesis with us at Snips (my former company)) and [David Bruant](https://twitter.com/DavidBruant), we plot this on a map to explore it visually.
 
 <figure>
     <img src="{{ site.baseurl }}/assets/article_images/predicting-abstention-rate-using-open-data/2014-02-22_viz.jpeg" style="max-width:100%;">
